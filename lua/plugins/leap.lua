@@ -1,7 +1,8 @@
 return {
 	"ggandor/leap.nvim",
 	lazy = false,
-	config = function ()
-		require("leap").add_default_mappings(true)
+	config = function()
+		vim.keymap.set({ 'n', 'x', 'o' }, 'f', '<Plug>(leap-forward)', { noremap = true })
+		vim.keymap.set({ 'n', 'x', 'o' }, 'F', '<Plug>(leap-backward)', { noremap = true })
 	end,
 }
