@@ -35,10 +35,13 @@ keymap("n", "<leader>x", ":BufferLinePickClose<CR>", { desc = "Закрыть в
 keymap("n", "<leader><s-x>", ":BufferLineCloseOthers<CR>", { desc = "Закрыть остальные буферы" })
 
 -- ========== SPRING BOOT ==========
-keymap("n", "<leader>sr", ":!mvn spring-boot:run<CR>", { desc = "Spring Boot: запуск" })
-keymap("n", "<leader>sb", ":!mvn clean package<CR>", { desc = "Spring Boot: билд" })
-keymap("n", "<leader>st", ":!mvn test<CR>", { desc = "Spring Boot: тесты" })
-keymap("n", "<leader>sd", ":!mvn clean package dockerfile:build<CR>", { desc = "Spring Boot: Docker образ" })
+vim.keymap.set("n", "<Leader>sr", function()
+	vim.cmd("botright 15split | terminal mvn spring-boot:run")
+end, { desc = "Spring Boot: запуск" })
+
+vim.keymap.set("n", "<Leader>srd", function()
+	vim.cmd("botright 15split | terminal mvn spring-boot:run -Dspring-boot.run.arguments=\"--debug\"")
+end, { desc = "Spring Boot: запуск debug" })
 
 -- ========== GIT (FUGITIVE + FLOG) ==========
 keymap("n", "<leader>gs", ":Git<CR>", { desc = "Git status" })
