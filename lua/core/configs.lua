@@ -1,3 +1,6 @@
+-- Lines Views
+vim.opt.cursorcolumn = true
+vim.opt.cursorline = true
 -- Line Numbers
 vim.wo.number = true
 vim.wo.relativenumber = true

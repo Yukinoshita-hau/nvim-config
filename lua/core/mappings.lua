@@ -36,11 +36,11 @@ keymap("n", "<leader><s-x>", ":BufferLineCloseOthers<CR>", { desc = "Закры�
 
 -- ========== SPRING BOOT ==========
 vim.keymap.set("n", "<Leader>sr", function()
-	vim.cmd("botright 15split | terminal mvn spring-boot:run")
+	vim.cmd("botright 10split | terminal mvn spring-boot:run")
 end, { desc = "Spring Boot: запуск" })
 
 vim.keymap.set("n", "<Leader>srd", function()
-	vim.cmd("botright 15split | terminal mvn spring-boot:run -Dspring-boot.run.arguments=\"--debug\"")
+	vim.cmd("botright 10split | terminal mvn spring-boot:run -Dspring-boot.run.arguments=\"--debug\"")
 end, { desc = "Spring Boot: запуск debug" })
 
 -- ========== GIT (FUGITIVE + FLOG) ==========
