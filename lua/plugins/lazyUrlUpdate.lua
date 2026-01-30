@@ -5,8 +5,8 @@ return {
 		ft = "lua",
 		opts = {},
 		keys = {
-			{ "<leader>up", "<cmd>LazyUrlUpdate<CR>", desc = "Update plugin under cursor" },
-			{ "<leader>bp", "<cmd>LazyUrlBuild<CR>",  desc = "Build plugin under cursor" },
+			{ "<leader>lu", "<cmd>LazyUrlUpdate<CR>", desc = "Update plugin under cursor" },
+			{ "<leader>lb", "<cmd>LazyUrlBuild<CR>",  desc = "Build plugin under cursor" },
 		}
 	},
 }
